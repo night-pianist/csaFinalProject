@@ -1,3 +1,4 @@
+//necessary libraries for an Audioplayer
 import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
@@ -5,8 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
 
+//Created with the help of ChatGPT
 public class AudioPlayer{
     // variable for audio clip
     private Clip clip;
@@ -99,6 +100,7 @@ public class AudioPlayer{
         frame.setVisible(true);
     }
 
+    //main method
     public static void main(String[] args) {
         AudioPlayer player = new AudioPlayer();
         AudioPlayer player2 = new AudioPlayer();
@@ -143,3 +145,4 @@ public class AudioPlayer{
             }
         });
     }
+}

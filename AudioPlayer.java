@@ -105,8 +105,10 @@ public class AudioPlayer{
         AudioPlayer player = new AudioPlayer();
         AudioPlayer player2 = new AudioPlayer();
         AudioPlayer player3 = new AudioPlayer();
+        AudioPlayer player4 = new AudioPlayer();
         Song poweroflove = new Song("Power of Love", "Huey Lewis and the News", "Rock", "C:/Users/Masroor Siddiqui/OneDrive/Pictures/Documents/Desktop2/Desktop/csaFinal-main/The Power Of Love- Huey Lewis And The News.wav");
         Song arabella = new Song("Arabella", "Arctic Monkeys", "Rock", "C:/Users/Masroor Siddiqui/OneDrive/Pictures/Documents/Desktop2/Desktop/csaFinal-main/Arabella.wav");
+        Song zeldaTheme = new Song("Legend of Zelda Theme", "Koji Kondo", "Video Game", "C:/Users/Masroor Siddiqui/OneDrive/Pictures/Documents/Desktop2/Desktop/csaFinal-main/Zelda Main Theme Song.wav");
         Song theArtofWar = new Audiobook("The Art of War", "Sun Tzu", "C:/Users/Masroor Siddiqui/OneDrive/Pictures/Documents/Desktop2/Desktop/csaFinal-main/The Art of War by Sun Tzu： Entire Unabridged Audiobook.wav");
 
         try {
@@ -118,6 +120,18 @@ public class AudioPlayer{
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 player.createAndShowGUI("Power of Love"); 
+            }
+        });
+
+        try {
+            player4.load(zeldaTheme.getFilePath());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                player4.createAndShowGUI(zeldaTheme.getTitle()); 
             }
         });
 

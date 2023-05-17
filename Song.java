@@ -1,10 +1,3 @@
-import java.io.*;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.UnsupportedAudioFileException;
-import java.io.File;
-import java.io.IOException;
-
 public class Song {
     // song variables
     private String title;
